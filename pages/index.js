@@ -14,7 +14,7 @@ export default function Home({data, unixtime}) {
           <Nav>
             <Nav.Link href="#Converter">Converter</Nav.Link>
             <Nav.Link href="#Pairs">Currency Pairs</Nav.Link>
-            <Nav.Link href="https://convert-currency-rates.netlify.app/">Github</Nav.Link>
+            <Nav.Link href="https://github.com/bryancheny/convert-currency-rates">Github</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
