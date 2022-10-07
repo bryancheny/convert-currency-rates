@@ -5,16 +5,3 @@ This is a currency converter which fetches data daily from an external [API](htt
 ## [Demo here](https://convert-currency-rates.netlify.app/)
 
 ![image](https://user-images.githubusercontent.com/68541293/194449263-ebc52d24-4eab-4fae-ae61-ae597dd81423.png)
-
-## Building from source
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
