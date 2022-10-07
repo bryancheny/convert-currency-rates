@@ -1,6 +1,6 @@
 # Currency Converter
 
-This is a currency converter which fetches data daily from an external [API](https://www.exchangerate-api.com/). The data is fetched from the API daily and cached in the server so that a fast static page is shown to the user. The page is updated automatically using Next.js's Incremental Static Regeneration feature. React and React-bootstrap are used to build the rest of the website.
+This is a currency converter which fetches data daily from an external [API](https://www.exchangerate-api.com/). The page is pre-rendered at build time and a cached static page is shown to visitors. The cache is purged daily and a new page is generated using the new data. This is done because the external API itself only updates daily (using the free tier anyway). 
 
 ## [Demo here](https://convert-currency-rates.netlify.app/)
 
