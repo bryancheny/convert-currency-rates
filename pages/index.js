@@ -33,7 +33,7 @@ export async function getStaticProps() {
   let unixtime;
   const labels = ["SGD","MYR","AED","AUD","BRL","CAD","CHF","CLP","CNY","COP","CZK","DKK","EUR","GBP","HKD","HUF","IDR","ILS","INR", "JPY", "USD","KRW","MXN","NOK","NZD","PHP","PLN","RON","RUB","SAR","SEK","THB","TRY","TWD","USD","ZAR"];
   for (const label of labels) {
-    const res = await fetch('https://api.exchangerate-api.com/v4/latest/' + label);
+    const res = await fetch('https://api.exchangerate-api.com/v6/561e5d7cc533560706b08789/latest/' + label);
     const subdata = await res.json();
     data[label] = subdata["rates"];
     unixtime = subdata["time_last_updated"];
