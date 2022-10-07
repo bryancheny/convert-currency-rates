@@ -10,7 +10,7 @@ function ButtonDropdowns(props) {
       <InputGroup>
         <Dropdown onSelect={props.onChangeCurrency}>
           <Dropdown.Toggle variant="outline-dark" id="input-group-dropdown-1">
-          <Image src=`/${hash[props.currency]}.svg` height={19} width={19}/> {props.currency}
+          <Image src={`/${hash[props.currency]}.svg`} height={19} width={19}/> {props.currency}
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item eventKey="SGD"><Image src="/sg.svg" height={19} width={19}/> SGD - Singapore Dollar</Dropdown.Item>
