@@ -5,17 +5,12 @@ import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 function ButtonDropdowns(props) {
   const hash = {"SGD": "sg", "MYR": "my", "AED": "ae", "AUD": "au", "BRL": "br", "CAD": "ca", "CHF": "ch", "CLP": "cl", "CNY": "cn", "COP": "co", "CZK": "cz", "DKK": "dk", "EUR": "eu", "GBP": "gb", "HKD": "hk", "HUF": "hu", "IDR": "id", "ILS": "il", "INR": "in", "JPY": "jp", "KRW": "kr", "MXN": "mx", "NZD": "nz", "NOK": "no", "PHP": "ph", "PLN": "pl", "RON": "ro", "RUB": "ru", "SAR": "sa", "SEK": "se", "THB": "th", "TRY": "tr", "TWD": "tw", "USD": "us", "ZAR": "za",}
-  const [imageLink,setImageLink] = useState("/" + hash[props.currency] + ".svg");
-  function updateCurrency(str) {
-    props.onChangeCurrency(str);
-    setImageLink("/" + hash[str] + ".svg");
-  }
   return (
     <>
       <InputGroup>
-        <Dropdown onSelect={updateCurrency}>
+        <Dropdown onSelect={props.onChangeCurrency}>
           <Dropdown.Toggle variant="outline-dark" id="input-group-dropdown-1">
-          <Image src={imageLink} height={19} width={19}/> {props.currency}
+          <Image src=`/${hash[props.currency]}.svg` height={19} width={19}/> {props.currency}
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item eventKey="SGD"><Image src="/sg.svg" height={19} width={19}/> SGD - Singapore Dollar</Dropdown.Item>
