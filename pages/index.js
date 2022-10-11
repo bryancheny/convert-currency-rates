@@ -44,6 +44,5 @@ export async function getStaticProps() {
       data,
       unixtime,
     },
-    revalidate: 86400,
   }
 }
