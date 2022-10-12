@@ -37,7 +37,7 @@ export async function getStaticProps() {
     const subdata = await res.json();
     data[label] = subdata["conversion_rates"];
     // unixtime = subdata["time_last_update_unix"];
-    unixtime = Date.now();
+    unixtime = Date.now()/1000;
   }
   
   return {
