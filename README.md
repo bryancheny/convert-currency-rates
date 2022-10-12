@@ -9,12 +9,15 @@ This is a responsive currency converter website which fetches data daily from an
 ## Build from Source
 After cloning the repo, open .env and set REACT_APP_API_KEY to be your [API key](https://www.exchangerate-api.com/). Set NEXT_REVALIDATE_TOKEN to be whatever password you want.
 
-Using npm 8.1.2,  
-`npm install`  
+Using npm 8.1.2,    
+`npm install`    
 Then run   
+
 `npm run build`  
 `npm run start`  
     
 Open the server at [http://localhost:3000/](http://localhost:3000/)
 
-To purge the cache and force-update the page, visit [http://localhost:3000/api/revalidate?secret=yourpassword](http://localhost:3000/api/revalidate?secret=yourpassword), where yourpassword is what you set NEXT_REVALIDATE_TOKEN to earlier. 
+To purge the cache and force-update the page, visit [http://localhost:3000/api/revalidate?secret=yourpassword](http://localhost:3000/api/revalidate?secret=yourpassword), where yourpassword is what you set NEXT_REVALIDATE_TOKEN to earlier. You can then use IFTTT to schedule webhook requests to that API endpoint.
+
+If you are deploying to netlify this won't work though because netlify [doesn't support it](https://github.com/netlify/next-runtime/discussions/1228). In that case you should let IFTTT visit Netlify's build hook to rebuild the site.
