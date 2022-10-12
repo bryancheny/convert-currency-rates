@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     }
   
     try {
-      await res.revalidate(req.query.path);
+      await res.revalidate('/');
       return res.json({
         revalidated: true
       });
