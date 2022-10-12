@@ -35,9 +35,9 @@ export async function getStaticProps() {
   for (const label of labels) {
     const res = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_API_KEY}/latest/` + label);
     const subdata = await res.json();
-    data[label] = subdata["conversion_rates"];
+    data[label] = await subdata["conversion_rates"];
     // unixtime = subdata["time_last_update_unix"];
-    unixtime = Date.now()/1000;
+    unixtime = await Date.now()/1000;
   }
   
   return {
