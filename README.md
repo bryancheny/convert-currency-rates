@@ -5,3 +5,16 @@ This is a responsive currency converter website which fetches data daily from an
 ## [Demo here](https://convert-currency-rates.netlify.app/)
 
 ![image](https://user-images.githubusercontent.com/68541293/194449263-ebc52d24-4eab-4fae-ae61-ae597dd81423.png)
+
+## Build from Source
+After cloning the repo, open .env and set REACT_APP_API_KEY to be your [API key](https://www.exchangerate-api.com/). Set NEXT_REVALIDATE_TOKEN to be whatever password you want.
+
+Using npm 8.1.2,
+`npm install`
+Then run 
+`npm run build`
+`npm run start`
+
+Open the server at [http://localhost:3000/](http://localhost:3000/)
+
+To purge the cache and force-update the page, visit [http://localhost:3000/api/revalidate?secret=yourpassword](http://localhost:3000/api/revalidate?secret=yourpassword), where yourpassword is what you set NEXT_REVALIDATE_TOKEN to earlier. 
